@@ -1,0 +1,32 @@
+ham documents,6951
+spam documents,2398
+Stats: 
+,ham,spam,pos_perc,neg_perc
+ham,59,10,93,7
+spam,0,23,100,0
+
+Stats: 
+,ham,spam,pos_perc,neg_perc
+ham,557,138,80,20
+spam,0,239,100,0
+
+Stats: 
+,ham,spam,pos_perc,neg_perc
+ham,919,471,66,34
+spam,0,479,100,0
+
+Stats: 
+,ham,spam,pos_perc,neg_perc
+ham,1085,1000,52,47
+spam,0,719,100,0
+
+Stats: 
+,ham,spam,pos_perc,neg_perc
+ham,1256,1524,45,54
+spam,0,959,100,0
+
+Stats: 
+,ham,spam,pos_perc,neg_perc
+ham,1396,2079,40,59
+spam,0,1199,100,0
+

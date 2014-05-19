@@ -45,15 +45,11 @@ public:
 		def_class(const char* name, int id) :
 			name(name), id(id)
 		{
-
 		}
 
 		void inject( std::string& token ){
 			_assert( current_object != NULL, "invalid object");
 			current_object->inject(token);
-
-//			features[token]++;
-//			feature_count += 1;
 		}
 
 		inline void train_feature( const std::string& feat ){
@@ -64,7 +60,6 @@ public:
 		inline void reset_features(){
 			features.clear();
 		}
-
 
 		void randomize_object_set() {
 			srand( time(NULL) );
@@ -84,18 +79,13 @@ public:
 		object* current_object = NULL;
 
 		static std::unordered_set<std::string> vocabulary;
-
 		std::unordered_map<std::string, int> features;
         int feature_count = 0;
 
     	friend std::ostream& operator<< (std::ostream& os, const def_class& def_class);
-
-
 };
 
 std::unordered_set<std::string> def_class::vocabulary;
-
-
 
 std::ostream& operator<< (std::ostream& os, const object& obj ){
 
@@ -120,7 +110,6 @@ std::ostream& operator<< (std::ostream& os, const def_class& _class)
 	os << "\n\n";
 	return os;
 }
-
 
 
 #endif /* DEFAULT_CLASS_HPP_ */

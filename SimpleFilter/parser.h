@@ -21,16 +21,62 @@ class parser{
 
 public:
         parser(){
-
+            pagesize = getpagesize();
         }
 
         struct stat buf;
-        int fd, pagesize;
-        char* data;
+        int fd = -1, pagesize;
+        char* data = NULL;
 
-        int it, file_size;
+        int it = -1, file_size = -1;
+
+        inline bool check_newline(){
+                return data[it] == '\n';
+        }
+
+        inline bool check_newline(int it){
+                return data[it] == '\n';
+        }
 
         virtual bool operator() (const char* path) = 0;
+
+        void init_ignore_list( const char* file ){
+			std::fstream fs (file, std::fstream::in);
+			std::string token;
+			while( fs >> token ){
+					ignore_list.insert(token);
+			}
+			fs.close();
+        }
+
+        std::unordered_set<std::string> ignore_list;
+
+        void setup_file( const char* path )
+        {
+        	data = NULL;
+			fd = open(path, O_RDONLY);
+			_assert( fd >= 0, "fail to open file %s", path );
+
+			fstat(fd, &buf);
+			file_size = buf.st_size;
+			it = 0; // place iterator at start
+			data = (char*) mmap( (caddr_t*) 0, file_size + 2, PROT_READ, MAP_SHARED, fd, (off_t) 0 );
+			_assert( *data != -1, "fail to mmap" );
+        }
+
+        void release_file(){
+            _assert( munmap( data, file_size + 2 ) != -1, "fail un unmap\n");
+            close(fd);
+        }
+
+        def_class* current_class = NULL;
+        void bind_class(def_class* current_class){
+        	this->current_class = current_class;
+        }
+
+        virtual ~parser(){
+
+        }
 };
 
 static std::vector<std::string> special_tokens = {
@@ -51,17 +97,9 @@ static const int FROM_TOK = 5;
 class mail_parser : public parser{
 
 public:
-        mail_parser(){
-                pagesize = getpagesize();
+        mail_parser() : parser(){
         }
 
-        inline bool check_newline(){
-                return data[it] == '\n';
-        }
-
-        inline bool check_newline(int it){
-                return data[it] == '\n';
-        }
 
         inline bool check_token( int tok_id )
         {
@@ -85,7 +123,6 @@ public:
         			return true;
         		}
         	}
-
         	return false;
         }
 
@@ -225,80 +262,40 @@ public:
 
         void parse_body(){
 
-                while( it < file_size && data[it] ){
-                        //fprintf(stdout, "%c", data[it]);
-
-                    	//fprintf(stdout,"%d %c %d\n", it, data[it], file_size);
-                        if( isalpha(data[it]) )
-                        {
-                                if( check_token(HTTP_TOK) ){
-                                        get_url();
-                                }
-                                else if( check_scrape_token() ){
-                                		munch_to_newline();
-                                }
-                                else {
-                                	get_token();
-                                }
-                        }
-                        else {
-                        	++it;
-                        }
-
-
-                }
+			while( it < file_size && data[it] )
+			{
+				if( isalpha(data[it]) )
+				{
+					if( check_token(HTTP_TOK) ){
+							get_url();
+					}
+					else if( check_scrape_token() ){
+							munch_to_newline();
+					}
+					else {
+						get_token();
+					}
+				}
+				else {
+					++it;
+				}
+			}
         }
 
 
-        void setup_file( const char* path )
+
+        bool operator() (const char* path)
         {
         	_assert(current_class != NULL, "Forgot to setup class\n");
         	current_class->inject_new_object();
 
-        	data = NULL;
-			fd = open(path, O_RDONLY);
-			_assert( fd >= 0, "fail to open file %s", path );
-
-			fstat(fd, &buf);
-			file_size = buf.st_size;
-			it = 0; // place iterator at start
-			data = (char*) mmap( (caddr_t*) 0, file_size + 2, PROT_READ, MAP_SHARED, fd, (off_t) 0 );
-			_assert( *data != -1, "fail to mmap" );
-        }
-
-        void release_file(){
-            _assert( munmap( data, file_size + 2 ) != -1, "fail un unmap\n");
-            close(fd);
-        }
-
-        bool operator() (const char* path)
-        {
 			setup_file(path);
 
-//			std::cout << path << "\n";
 			parse_header();
 			parse_body();
-//			std::cout << path << "\n";
 
 			release_file();
 			return true;
-        }
-
-        void init_ignore_list( const char* file ){
-			std::fstream fs (file, std::fstream::in);
-			std::string token;
-			while( fs >> token ){
-					ignore_list.insert(token);
-			}
-			fs.close();
-        }
-
-        std::unordered_set<std::string> ignore_list;
-
-        def_class* current_class;
-
-        void bind_class(def_class* current_class){
-        	this->current_class = current_class;
         }
 
 
@@ -312,6 +309,141 @@ public:
         char token[TOKEN_SIZE];
 };
 
+class kelog_parser : public parser{
+
+public:
+
+	std::vector<def_class*>& classes;
+	kelog_parser( std::vector<def_class*>& classes ) :
+		 parser(), classes(classes)
+	{
+
+	}
+
+	void skip_to_tok( char tok ){
+		while( data[it++] != tok );
+	}
+
+	void skip_line(){
+		skip_to_tok('\n');
+	}
+
+	void parse_header(){
+		skip_to_tok('\t');
+		skip_to_tok('\t');
+	}
+
+	static const int TOK_SIZE = 128;
+	char token[TOK_SIZE];
+	std::vector< std::string > tok_str;
+
+	void parse_body( char delim ){
+
+		int len = 0;
+		tok_str.clear();
+
+		while( it < file_size && data[it] != delim ){
+
+			if( data[it] == ' ' ){
+
+				if( len ){
+					token[len] = 0;
+					std::string token_str(token);
+					//if( ignore_list.find(token_str) == ignore_list.end() ){
+						tok_str.push_back( token_str );
+					//}
+				}
+
+				len = 0;
+			}
+			else {
+				token[len++] = data[it];
+			}
+
+			++it;
+		}
+
+		if( len ){
+			token[len] = 0;
+			std::string token_str(token);
+			//if( ignore_list.find(token_str) == ignore_list.end() ){
+				tok_str.push_back( token_str );
+			//}
+		}
+
+//		for_each( i, tok_str ){
+//			std::cerr << tok_str[i] << " ";
+//		}
+//		std::cerr << "\n";
+	}
+
+	void parse_class(){
+
+		++it;
+		if( tok_str.size() > 0 )
+		{
+			int _class_id = data[it] - '0';
+			_assert( _class_id >= 0 && _class_id <= 4, "Invalid class id %d |%c|", it, (char)data[it]);
+
+			classes[ _class_id ]->inject_new_object();
+			for_each( i, tok_str ){
+				classes[ _class_id ]->inject(tok_str[i]);
+			}
+
+			tok_str.clear();
+		}
+
+		it += 2;
+	}
+
+	void parse_class_obj(std::vector<object*>& objects){
+
+		++it;
+
+		if( tok_str.size() > 0 )
+		{
+			objects.push_back( new object(NULL) );
+
+			for_each( i, tok_str ){
+				objects[ objects.size() - 1 ]->inject(tok_str[i]);
+			}
+
+			tok_str.clear();
+		}
+
+	}
+
+	bool operator() (const char* path)
+	{
+		setup_file(path);
+
+		skip_line();
+		while( it < file_size ){
+			parse_header();
+			parse_body('\t');
+			parse_class();
+		}
+
+		release_file();
+		return true;
+	}
+
+	bool operator() (const char* path, std::vector<object*>& objs){
+
+		setup_file(path);
+
+		skip_line();
+		while( it < file_size ){
+			parse_header();
+			parse_body('\n');
+			parse_class_obj(objs);
+		}
+
+		release_file();
+		return true;
+	}
+
+};
 
 
 
