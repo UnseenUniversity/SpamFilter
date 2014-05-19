@@ -1,0 +1,731 @@
+ham documents: 6951
+spam documents: 2398
+sample percentage:
+10	10
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	695	0	100		0
+
+spam	113	126	52		47
+
+
+sample percentage:
+10	20
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	694	1	99		0
+
+spam	300	179	37		62
+
+
+sample percentage:
+10	30
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	695	0	100		0
+
+spam	466	253	35		64
+
+
+sample percentage:
+10	40
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	695	0	100		0
+
+spam	757	202	21		78
+
+
+sample percentage:
+10	50
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	695	0	100		0
+
+spam	1045	154	12		87
+
+
+sample percentage:
+10	60
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	695	0	100		0
+
+spam	1344	94	6		93
+
+
+sample percentage:
+10	70
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	695	0	100		0
+
+spam	1578	100	5		94
+
+
+sample percentage:
+10	80
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	695	0	100		0
+
+spam	1867	51	2		97
+
+
+sample percentage:
+10	90
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	695	0	100		0
+
+spam	2132	26	1		98
+
+
+sample percentage:
+20	10
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	1388	2	99		0
+
+spam	110	129	53		46
+
+
+sample percentage:
+20	20
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	1390	0	100		0
+
+spam	248	231	48		51
+
+
+sample percentage:
+20	30
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	1390	0	100		0
+
+spam	440	279	38		61
+
+
+sample percentage:
+20	40
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	1390	0	100		0
+
+spam	714	245	25		74
+
+
+sample percentage:
+20	50
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	1389	1	99		0
+
+spam	1006	193	16		83
+
+
+sample percentage:
+20	60
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	1389	1	99		0
+
+spam	1327	111	7		92
+
+
+sample percentage:
+20	70
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	1389	1	99		0
+
+spam	1582	96	5		94
+
+
+sample percentage:
+20	80
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	1390	0	100		0
+
+spam	1866	52	2		97
+
+
+sample percentage:
+20	90
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	1390	0	100		0
+
+spam	2126	32	1		98
+
+
+sample percentage:
+30	10
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	2078	7	99		0
+
+spam	92	147	61		38
+
+
+sample percentage:
+30	20
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	2082	3	99		0
+
+spam	225	254	53		46
+
+
+sample percentage:
+30	30
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	2084	1	99		0
+
+spam	390	329	45		54
+
+
+sample percentage:
+30	40
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	2083	2	99		0
+
+spam	664	295	30		69
+
+
+sample percentage:
+30	50
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	2085	0	100		0
+
+spam	995	204	17		82
+
+
+sample percentage:
+30	60
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	2085	0	100		0
+
+spam	1299	139	9		90
+
+
+sample percentage:
+30	70
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	2084	1	99		0
+
+spam	1575	103	6		93
+
+
+sample percentage:
+30	80
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	2084	1	99		0
+
+spam	1851	67	3		96
+
+
+sample percentage:
+30	90
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	2085	0	100		0
+
+spam	2124	34	1		98
+
+
+sample percentage:
+40	10
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	2775	5	99		0
+
+spam	73	166	69		30
+
+
+sample percentage:
+40	20
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	2778	2	99		0
+
+spam	184	295	61		38
+
+
+sample percentage:
+40	30
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	2777	3	99		0
+
+spam	352	367	51		48
+
+
+sample percentage:
+40	40
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	2780	0	100		0
+
+spam	609	350	36		63
+
+
+sample percentage:
+40	50
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	2780	0	100		0
+
+spam	827	372	31		68
+
+
+sample percentage:
+40	60
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	2780	0	100		0
+
+spam	1211	227	15		84
+
+
+sample percentage:
+40	70
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	2780	0	100		0
+
+spam	1571	107	6		93
+
+
+sample percentage:
+40	80
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	2780	0	100		0
+
+spam	1850	68	3		96
+
+
+sample percentage:
+40	90
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	2780	0	100		0
+
+spam	2134	24	1		98
+
+
+sample percentage:
+50	10
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	3463	12	99		0
+
+spam	47	192	80		19
+
+
+sample percentage:
+50	20
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	3460	15	99		0
+
+spam	120	359	74		25
+
+
+sample percentage:
+50	30
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	3469	6	99		0
+
+spam	266	453	63		36
+
+
+sample percentage:
+50	40
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	3475	0	100		0
+
+spam	459	500	52		47
+
+
+sample percentage:
+50	50
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	3475	0	100		0
+
+spam	767	432	36		63
+
+
+sample percentage:
+50	60
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	3474	1	99		0
+
+spam	1121	317	22		77
+
+
+sample percentage:
+50	70
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	3474	1	99		0
+
+spam	1529	149	8		91
+
+
+sample percentage:
+50	80
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	3474	1	99		0
+
+spam	1842	76	3		96
+
+
+sample percentage:
+50	90
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	3475	0	100		0
+
+spam	2120	38	1		98
+
+
+sample percentage:
+60	10
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	4144	26	99		0
+
+spam	9	230	96		3
+
+
+sample percentage:
+60	20
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	4144	26	99		0
+
+spam	65	414	86		13
+
+
+sample percentage:
+60	30
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	4152	18	99		0
+
+spam	160	559	77		22
+
+
+sample percentage:
+60	40
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	4163	7	99		0
+
+spam	347	612	63		36
+
+
+sample percentage:
+60	50
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	4168	2	99		0
+
+spam	589	610	50		49
+
+
+sample percentage:
+60	60
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	4168	2	99		0
+
+spam	914	524	36		63
+
+
+sample percentage:
+60	70
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	4168	2	99		0
+
+spam	1458	220	13		86
+
+
+sample percentage:
+60	80
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	4170	0	100		0
+
+spam	1819	99	5		94
+
+
+sample percentage:
+60	90
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	4170	0	100		0
+
+spam	2135	23	1		98
+
+
+sample percentage:
+70	10
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	4784	81	98		1
+
+spam	2	237	99		0
+
+
+sample percentage:
+70	20
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	4811	54	98		1
+
+spam	9	470	98		1
+
+
+sample percentage:
+70	30
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	4836	29	99		0
+
+spam	57	662	92		7
+
+
+sample percentage:
+70	40
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	4846	19	99		0
+
+spam	102	857	89		10
+
+
+sample percentage:
+70	50
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	4849	16	99		0
+
+spam	291	908	75		24
+
+
+sample percentage:
+70	60
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	4860	5	99		0
+
+spam	621	817	56		43
+
+
+sample percentage:
+70	70
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	4863	2	99		0
+
+spam	1067	611	36		63
+
+
+sample percentage:
+70	80
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	4862	3	99		0
+
+spam	1705	213	11		88
+
+
+sample percentage:
+70	90
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	4864	1	99		0
+
+spam	2102	56	2		97
+
+
+sample percentage:
+80	10
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	4914	646	88		11
+
+spam	1	238	99		0
+
+
+sample percentage:
+80	20
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	5138	422	92		7
+
+spam	0	479	100		0
+
+
+sample percentage:
+80	30
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	5392	168	96		3
+
+spam	3	716	99		0
+
+
+sample percentage:
+80	40
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	5471	89	98		1
+
+spam	21	938	97		2
+
+
+sample percentage:
+80	50
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	5491	69	98		1
+
+spam	39	1160	96		3
+
+
+sample percentage:
+80	60
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	5539	21	99		0
+
+spam	243	1195	83		16
+
+
+sample percentage:
+80	70
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	5543	17	99		0
+
+spam	596	1082	64		35
+
+
+sample percentage:
+80	80
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	5555	5	99		0
+
+spam	1197	721	37		62
+
+
+sample percentage:
+80	90
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	5559	1	99		0
+
+spam	2067	91	4		95
+
+
+sample percentage:
+90	10
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	1309	4946	20		79
+
+spam	0	239	100		0
+
+
+sample percentage:
+90	20
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	1782	4473	28		71
+
+spam	1	478	99		0
+
+
+sample percentage:
+90	30
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	3028	3227	48		51
+
+spam	1	718	99		0
+
+
+sample percentage:
+90	40
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	3883	2372	62		37
+
+spam	0	959	100		0
+
+
+sample percentage:
+90	50
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	4882	1373	78		21
+
+spam	0	1199	100		0
+
+
+sample percentage:
+90	60
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	5636	619	90		9
+
+spam	6	1432	99		0
+
+
+sample percentage:
+90	70
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	6143	112	98		1
+
+spam	32	1646	98		1
+
+
+sample percentage:
+90	80
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	6221	34	99		0
+
+spam	186	1732	90		9
+
+
+sample percentage:
+90	90
+Stats: 
+	ham	spam	pos_perc	neg_perc	
+ham	6251	4	99		0
+
+spam	1570	588	27		72
+
+
