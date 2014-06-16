@@ -1,0 +1,81 @@
+sample percentage 10
+Stats: 
+,very negative,negative,neutral,positive,very positive,pos_perc,neg_perc
+very negative,600,58,19,9,21,96,3
+negative,1953,340,197,112,125,92,7
+neutral,4520,1167,1177,637,457,45,54
+positive,2259,354,223,265,191,26,73
+very positive,715,82,34,48,41,13,86
+
+sample percentage 20
+Stats: 
+,very negative,negative,neutral,positive,very positive,pos_perc,neg_perc
+very negative,1140,132,77,40,25,94,5
+negative,3916,636,470,297,135,92,7
+neutral,8920,2285,2601,1555,555,48,51
+positive,4612,709,546,477,241,24,75
+very positive,1429,150,97,94,71,12,87
+
+sample percentage 30
+Stats: 
+,very negative,negative,neutral,positive,very positive,pos_perc,neg_perc
+very negative,1610,280,118,80,33,93,6
+negative,5170,1412,780,655,164,91,8
+neutral,10567,4606,4709,3249,743,60,39
+positive,5963,1603,895,1033,384,30,69
+very positive,1911,396,143,202,109,14,85
+
+sample percentage 40
+Stats: 
+,very negative,negative,neutral,positive,very positive,pos_perc,neg_perc
+very negative,2412,130,128,73,85,94,5
+negative,7991,952,947,509,509,91,8
+neutral,18543,3167,5254,2643,2225,44,55
+positive,9427,784,1350,947,662,27,72
+very positive,3027,122,258,170,105,10,89
+
+sample percentage 50
+Stats: 
+,very negative,negative,neutral,positive,very positive,pos_perc,neg_perc
+very negative,2360,564,179,70,363,89,10
+negative,8012,2260,1459,637,1268,88,11
+neutral,18585,6858,6964,3644,3740,52,47
+positive,9259,2460,1512,1383,1849,34,65
+very positive,2831,634,227,313,598,29,70
+
+sample percentage 60
+Stats: 
+,very negative,negative,neutral,positive,very positive,pos_perc,neg_perc
+very negative,3445,270,231,154,143,93,6
+negative,11453,1553,1564,974,819,89,10
+neutral,26372,5617,7652,4889,3219,46,53
+positive,13918,1349,1668,1735,1086,28,71
+very positive,4499,218,234,360,212,13,86
+
+sample percentage 70
+Stats: 
+,very negative,negative,neutral,positive,very positive,pos_perc,neg_perc
+very negative,3591,629,286,124,320,91,8
+negative,12009,2916,2090,876,1199,90,9
+neutral,28868,7993,10094,4892,3860,50,49
+positive,14994,2248,2634,1760,1412,30,69
+very positive,4658,548,496,314,428,17,82
+
+sample percentage 80
+Stats: 
+,very negative,negative,neutral,positive,very positive,pos_perc,neg_perc
+very negative,2633,1352,595,147,930,79,20
+negative,8374,6029,3660,958,2796,86,13
+neutral,18466,18023,15886,4323,6967,68,31
+positive,10687,5966,4479,1693,3516,40,59
+very positive,3755,1406,811,380,1012,28,71
+
+sample percentage 90
+Stats: 
+,very negative,negative,neutral,positive,very positive,pos_perc,neg_perc
+very negative,941,1136,2327,1265,695,41,58
+negative,3878,5445,8148,4702,2371,76,23
+neutral,12554,18210,23743,12301,4815,81,18
+positive,4011,5567,10668,5808,3580,72,27
+very positive,930,1290,3117,1516,1432,45,54
+
